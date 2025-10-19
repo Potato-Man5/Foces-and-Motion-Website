@@ -1,0 +1,216 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Forces & Motion — Physics that Moves Communities</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="icon" href="data:;base64,iVBORw0KGgo=" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <div class="brand">
+        <div class="logo">FM</div>
+        <div>
+          <h1>Forces & Motion</h1>
+          <p class="tagline">Physics that moves communities</p>
+        </div>
+      </div>
+
+      <nav class="main-nav" aria-label="Main">
+        <button class="nav-btn" data-target="home">Home</button>
+        <button class="nav-btn" data-target="community">Community Problems</button>
+        <button class="nav-btn" data-target="science">Science Behind It</button>
+        <button class="nav-btn" data-target="resources">Resources</button>
+        <select id="theme" title="Theme" aria-label="Theme toggle">
+          <option value="system">System</option>
+          <option value="light">Light</option>
+          <option value="dark">Dark</option>
+        </select>
+      </nav>
+
+      <button id="mobileToggle" class="mobile-toggle" aria-label="Open menu">☰</button>
+    </div>
+  </header>
+
+  <main class="container">
+    <!-- HOME -->
+    <section id="home" class="section active">
+      <div class="hero">
+        <div class="hero-text">
+          <h2>Understanding forces & motion to solve local problems</h2>
+          <p class="lead">From safer roads to stronger roofs and accessible ramps — physics gives communities practical, evidence-based solutions. Learn how forces, friction, and motion affect everyday life, and discover actions your barangay can take.</p>
+          <div class="hero-actions">
+            <button class="cta" data-target="community">Explore Community Problems</button>
+            <button class="cta outline" data-target="science">Learn the Science</button>
+          </div>
+        </div>
+        <div class="hero-image" aria-hidden="true">
+          <!-- decorative illustration (SVG simple) -->
+          <svg viewBox="0 0 360 220" xmlns="http://www.w3.org/2000/svg" role="img">
+            <defs>
+              <linearGradient id="g" x1="0" x2="1">
+                <stop offset="0" stop-color="#06b6d4"/>
+                <stop offset="1" stop-color="#10b981"/>
+              </linearGradient>
+            </defs>
+            <rect x="0" y="0" width="360" height="220" rx="12" fill="url(#g)"/>
+            <g transform="translate(18,26)" fill="#fff" opacity="0.95">
+              <rect x="0" y="0" width="120" height="60" rx="8" />
+              <rect x="132" y="0" width="190" height="60" rx="8" />
+              <rect x="0" y="82" width="302" height="110" rx="8" />
+            </g>
+          </svg>
+        </div>
+      </div>
+
+      <div class="home-cards">
+        <article class="card">
+          <h3>Community-first learning</h3>
+          <p>Short explanations highlight how physics helps local problems: road safety, infrastructure resilience, accessibility and efficient public transport.</p>
+        </article>
+        <article class="card">
+          <h3>Practical examples</h3>
+          <p>Each topic connects to clear community actions (maintenance, design, awareness campaigns), not just calculations.</p>
+        </article>
+        <article class="card">
+          <h3>Tools & resources</h3>
+          <p>Printable posters, classroom activities, and project ideas for barangay-level improvements.</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- COMMUNITY PROBLEMS -->
+    <section id="community" class="section">
+      <h2>Community Problems — Real situations where physics matters</h2>
+      <p class="muted">Click a card to read the short explanation and community recommendations.</p>
+
+      <div class="grid">
+        <!-- Card 1 -->
+        <article class="problem card" data-id="road">
+          <h3>Road Safety & Braking Distance</h3>
+          <p class="small">How speed, vehicle mass, and wet surfaces increase stopping distance — and how small changes can save lives.</p>
+          <div class="card-actions">
+            <button class="learn" data-id="road">Learn more</button>
+          </div>
+        </article>
+
+        <!-- Card 2 -->
+        <article class="problem card" data-id="roof">
+          <h3>Typhoon Winds & Roof Stability</h3>
+          <p class="small">Why roofs lift during storms and what simple design changes reduce the risk of uplift.</p>
+          <div class="card-actions">
+            <button class="learn" data-id="roof">Learn more</button>
+          </div>
+        </article>
+
+        <!-- Card 3 -->
+        <article class="problem card" data-id="ramp">
+          <h3>Carrying Loads & Ramps</h3>
+          <p class="small">Why ramp steepness matters for accessibility and how to choose safe slopes for carts and wheelchairs.</p>
+          <div class="card-actions">
+            <button class="learn" data-id="ramp">Learn more</button>
+          </div>
+        </article>
+
+        <!-- Card 4 -->
+        <article class="problem card" data-id="bridge">
+          <h3>Bridges & Public Structure Safety</h3>
+          <p class="small">Understanding weight limits, tension, and compression to keep shared infrastructure safe.</p>
+          <div class="card-actions">
+            <button class="learn" data-id="bridge">Learn more</button>
+          </div>
+        </article>
+
+        <!-- Card 5 -->
+        <article class="problem card" data-id="transport">
+          <h3>Sustainable Transport & Fuel Efficiency</h3>
+          <p class="small">How smoother driving and sensible acceleration reduces fuel use and emissions for public transport.</p>
+          <div class="card-actions">
+            <button class="learn" data-id="transport">Learn more</button>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- SCIENCE BEHIND IT -->
+    <section id="science" class="section">
+      <h2>Science Behind It</h2>
+      <p class="muted">Short, accessible explanations of the physics ideas used in our community problems.</p>
+
+      <div class="grid">
+        <article class="card">
+          <h3>Forces & Free-Body Diagrams</h3>
+          <p>Identify every push and pull: gravity, normal force, friction, tension. Drawing a free-body diagram helps clarify what matters in a situation.</p>
+        </article>
+
+        <article class="card">
+          <h3>Newton’s Laws — Why things accelerate</h3>
+          <p>Newton’s 2nd law (ΣF = ma) links net force, mass, and acceleration — a core idea used for braking, pushing carts, and vehicle motion.</p>
+        </article>
+
+        <article class="card">
+          <h3>Friction in everyday life</h3>
+          <p>Friction depends on surface types and normal force. It keeps us from slipping but can also make pushing heavy loads harder.</p>
+        </article>
+
+        <article class="card">
+          <h3>Work, Energy & Efficiency</h3>
+          <p>Work (force × distance) and energy explain why smoother acceleration saves fuel and why lifting loads takes more effort.</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- RESOURCES -->
+    <section id="resources" class="section">
+      <h2>Resources</h2>
+      <p class="muted">Materials you can use in class or the community: posters, activities, and project ideas.</p>
+
+      <div class="resources-grid">
+        <div class="card">
+          <h4>Printable poster: "Safe Ramps"</h4>
+          <p class="small">A one-page guide showing recommended ramp slopes and tips for barangay workers.</p>
+          <div class="card-actions">
+            <a class="btn" href="#" download>Download (PDF)</a>
+          </div>
+        </div>
+
+        <div class="card">
+          <h4>Teacher activity: Measure & Report</h4>
+          <p class="small">Simple project: students measure a ramp angle, estimate needed push force, and propose improvements.</p>
+          <div class="card-actions">
+            <a class="btn" href="#">View activity</a>
+          </div>
+        </div>
+
+        <div class="card">
+          <h4>Community checklist</h4>
+          <p class="small">A short checklist for barangay staff: inspect pavement, check roof fastenings, and evaluate ramp accessibility.</p>
+          <div class="card-actions">
+            <a class="btn" href="#">Open checklist</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>© <span id="year"></span> Forces & Motion — Physics that Moves Communities</p>
+      <p class="muted small">Made for students, teachers, and community leaders.</p>
+    </div>
+  </footer>
+
+  <!-- Modal for problem details -->
+  <div id="modal" class="modal hidden" role="dialog" aria-modal="true" aria-hidden="true">
+    <div class="modal-box" role="document">
+      <button class="modal-close" aria-label="Close">✕</button>
+      <div id="modal-content"></div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
+
