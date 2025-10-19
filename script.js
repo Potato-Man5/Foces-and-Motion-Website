@@ -173,23 +173,26 @@ modal.addEventListener('click', (e) => {
   if (e.target === modal) closeModal();
 });
 
-// theme handling
+// --- Dark mode ---
 const themeSelect = document.getElementById('theme');
+const root = document.documentElement;
+
 function applyTheme(mode) {
-  const body = document.body;
-  if (mode === 'dark') {
-    body.style.background = '#071127';
-    body.style.color = '#e6eef6';
-  } else if (mode === 'light') {
-    body.style.background = '';
-    body.style.color = '';
-  } else { // system
-    body.style.background = '';
-    body.style.color = '';
+  if (mode === 'dark') root.classList.add('dark');
+  else if (mode === 'light') root.classList.remove('dark');
+  else {
+    // System preference
+    if (window.matchMedia('(prefers-color-scheme: dark)').matches)
+      root.classList.add('dark');
+    else
+      root.classList.remove('dark');
   }
 }
-themeSelect.addEventListener('change', (e) => applyTheme(e.target.value));
+
+// Initialize + event
 applyTheme('system');
+themeSelect.addEventListener('change', (e) => applyTheme(e.target.value));
+
 
 // initialize default view
 showSection('home');
